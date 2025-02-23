@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./assets/js/index.js" defer></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Морской бой</title>
-</head>
-<body>
-    <h1>Морской бой</h1>
-    <div id="grid"></div>
-</body>
-</html>
+  </head>
+  <body>
+    <main>
+      <h2 id="turnMessage"></h2>
+      <h1>Морской бой</h1>
 
+      <div class="board-container">
+        <div>
+          <h2>Игрок 1</h2>
+          <div id="grid0" class="grid"></div>
+        </div>
+        <div>
+          <h2>Игрок 2</h2>
+          <div id="grid1" class="grid"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

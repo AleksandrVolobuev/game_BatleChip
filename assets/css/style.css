@@ -1,31 +1,36 @@
-/*body {
-  --btn-color: #edd41a;
-  --bg-color: #000;
-  padding: 15px;
-  margin: 0;
-  display: grid;
-  background-color: var(--bg-color);
-}*/
 
-#grid {
-  display: grid;
-  grid-template-columns: repeat(10, 50px);
+body {
+  background-image: url('../img/boi3-19.jpg');
+  /*background-size: cover; Растягивает изображение на весь экран*/
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Запрещает повторение */
 }
 
+.board-container {
+  display: flex;
+  justify-content: space-around;
+}
+.grid {
+  display: grid;
+  background-color:#3D6773;
+  grid-template-columns: repeat(10, 30px);
+  gap: 3px;
+}
+.field{
+  display: inline-block;
+}
 .cell {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-
 .hit {
   background-color: red;
 }
-
 .miss {
   background-color: lightgray;
 }
