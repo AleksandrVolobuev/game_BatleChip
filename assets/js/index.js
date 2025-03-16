@@ -5,6 +5,20 @@ let playerGrids = [Array(gridSize).fill(null).map(() => Array(gridSize).fill(0))
 let hits = [0, 0];
 let currentPlayer = 0;
 
+const gameMusic = document.querySelector('.gameMusic')
+gameMusic.volume = 0.5; // Громкость музыки
+
+let musicStarted = false;
+// Запуск музыки
+function startMusic() {
+    if (!musicStarted) {
+      gameMusic.play();
+      musicStarted = true;
+    }
+}
+
+startMusic();
+
 // Функция обновления сообщения о текущем ходе
 function updateTurnMessage() {
     document.getElementById('turnMessage').innerText = `Ход игрока ${currentPlayer + 1}`;
