@@ -1,24 +1,58 @@
-
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Убираем прокрутку */
+}
 body {
   background-image: url('../img/boi3-19.jpg');
   /*background-size: cover; Растягивает изображение на весь экран*/
-  background-position: center; /* Центрирует изображение */
-  background-repeat: no-repeat; /* Запрещает повторение */
+  background-position: center;
+  /* Центрирует изображение */
+  background-repeat: no-repeat;
+  /* Запрещает повторение */
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Полная высота экрана */
+  min-height: 0;
+  overflow: hidden; /* Чтобы избежать лишнего скролла */
+}
+
+.header, .footer {
+  flex-shrink: 0;
+  width: 100%;
+  height: 60px; /* Задайте фиксированную высоту */
+}
+
+
+.main {
+  flex-grow: 1;
+  /* Заполняет всё доступное пространство */
+  width: 100%;
+}
+
 
 .board-container {
   display: flex;
   justify-content: space-around;
 }
+
 .grid {
   display: grid;
-  background-color:#3D6773;
+  background-color: #3D6773;
   grid-template-columns: repeat(10, 30px);
   gap: 3px;
 }
-.field{
+
+.field {
   display: inline-block;
 }
+
 .cell {
   width: 30px;
   height: 30px;
@@ -28,9 +62,18 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+
 .hit {
   background-color: red;
 }
+
 .miss {
   background-color: lightgray;
+}
+.player {
+  text-align: center;
+color: #dd2c04;
+background-color: #73c8f0;
+border-radius: 10px;
+padding: 5px;
 }

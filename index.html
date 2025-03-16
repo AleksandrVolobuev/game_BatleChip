@@ -5,25 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./assets/js/index.js" defer></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <audio id="gameMusic" src="your-music-file.mp3" loop></audio>
 
     <title>Морской бой</title>
   </head>
   <body>
-    <main>
-      <h2 id="turnMessage"></h2>
-      <h1>Морской бой</h1>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Морской бой</h1>
+      </header>
+      <main class="main">
+        <audio
+          class="gameMusic"
+          src="/assets/media/audiomachine-guardians-at-the-gate.mp3"
+          loop
+        ></audio>
 
-      <div class="board-container">
-        <div>
-          <h2>Игрок 1</h2>
-          <div id="grid0" class="grid"></div>
+        <div class="board-container">
+          <div>
+            <h2 class="player">Первый игрок</h2>
+            <div id="grid0" class="grid"></div>
+          </div>
+          <div>
+            <h2 class="player">Второй игрок</h2>
+            <div id="grid1" class="grid"></div>
+          </div>
         </div>
-        <div>
-          <h2>Игрок 2</h2>
-          <div id="grid1" class="grid"></div>
-        </div>
-      </div>
-    </main>
+      </main>
+      <h2 class="turnMessage player" >Игрок</h2>
+      <footer class="footer">
+        <button class="startMusic player">включить музыку</button>
+        <button class="stopMusic player">выключить музыку</button>
+      </footer>
+    </div>
   </body>
 </html>
